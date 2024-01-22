@@ -74,7 +74,7 @@ export default function App() {
               </button>
             </li>
             <li>
-              <a className="" href={cv} download="yassinBozugarrouCV">
+              <a className="" href={cv} target="_blank" download="yassinBozugarrouCV">
                 <button className="continue-application ml-5">
                   <div>
                     <div className="pencil"></div>
