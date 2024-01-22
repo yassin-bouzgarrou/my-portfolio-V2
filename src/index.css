@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -482,7 +483,7 @@ a {
   background: rgb(98, 100, 118)
 }
 
-.frontedn-icon {
+.frontedn-icon { 
 
 display: flex;
 justify-content: center;
@@ -561,7 +562,7 @@ align-items: center;
 }
 
 .cardsflex{
- 
+ gap:25px;
   display: flex;
   justify-content: space-between;
 }
@@ -593,4 +594,26 @@ align-items: center;
 
 .card-photo:hover .card_title {
   transform: translateZ(50px);
+}
+
+@media only screen and (max-width: 768px) {
+  .e-card {
+      padding: 10px;
+      margin-bottom: 15px;
+      width: 100%; /* Make the card 100% width on smaller screens */
+      height: 250px; /* Allow the height to adjust based on content */
+  }
+  .titlePhon {
+      font-size: 15px;
+  }
+  .icons {
+      width: 40px;
+  }
+  .infotop {
+      margin-top: -50px;
+  }
+.cardsflex{
+  display: block;
+margin: 15px;
+}
 }

@@ -14,6 +14,7 @@ import { MdOutlineWeb } from "react-icons/md";
 import { TfiServer } from "react-icons/tfi";
 import { RiTeamLine } from "react-icons/ri";
 import { MdOutlineWebAsset } from "react-icons/md";
+import Svganimate from "./assets/PICVID/underpic.gif"
 import { CgWebsite } from "react-icons/cg";
 import { useInView } from "react-intersection-observer";
 
@@ -36,7 +37,7 @@ export default function App() {
   }, [dark, controls, inView]);
 
   const cardVariants = {
-    hidden: { opacity: 0, x: -800 },
+    hidden: { opacity: 0, x: -300 },
     visible: { opacity: 2, x: 0 },
   };
 
@@ -94,21 +95,26 @@ export default function App() {
         </nav>
 
         <div className="flex justify-center">
-          <div className="border-8 border-yellow-300 rounded-full">
-            <motion.img
-              className="counded-full w-44 h-44"
-              src={ImgYas}
-              alt="Description of the image"
-              initial={{ scale: 0 }}
-              animate={{ rotate: 360, scale: 1 }}
-              transition={{
-                type: "spring",
-                stiffness: 260,
-                damping: 30,
-              }}
-              style={{ borderRadius: "50%" }}
-            />
-          </div>
+        <div className=" rounded-full relative">
+        <div className="absolute top-0 left-0 w-full h-full">
+    <img   className="   w-[400px]   opacity-95   h-52" src={Svganimate} alt="Description of the SVG animation" />
+  </div>
+  <motion.img
+    className="counded-full w-44 h-44"
+    src={ImgYas}
+    alt="Description of the image"
+    initial={{ scale: 0 }}
+    animate={{ rotate: 360, scale: 1 }}
+    transition={{
+      type: "spring",
+      stiffness: 260,
+      damping: 30,
+    }}
+    style={{ borderRadius: "50%" }}
+  />
+
+</div>
+
         </div>
 
         <div onClick={() => toggle(!state)}>
@@ -199,7 +205,7 @@ export default function App() {
       >
         <div className="cardsflex">
           <div class="e-card playing">
-            <div class="image"></div>
+            
 
             <div class="wave"></div>
             <div class="wave"></div>
@@ -208,9 +214,9 @@ export default function App() {
             <div class="infotop">
               <div className="frontedn-icon">
                 {" "}
-                <CgWebsite size={"80px"} />
+                <CgWebsite className="icons" size={"80px"} />
               </div>
-              <p className=" text-[22px]">Frontend Development</p>
+              <p className=" text-[22px] titlePhon">Frontend Development</p>
           
             </div>
           </div>
@@ -223,10 +229,10 @@ export default function App() {
 
             <div class="infotop">
               <div className="frontedn-icon  mb-1 ">
-                <TfiServer size={"60px"} />
+                <TfiServer className="icons" size={"60px"} />
               </div>
 
-              <p className=" text-[23px]   ">Backend Development</p>
+              <p className=" text-[23px]  titlePhon  ">Backend Development</p>
             </div>
           </div>
           <div class="e-card playing">
@@ -238,9 +244,9 @@ export default function App() {
 
             <div class="infotop">
               <div className="frontedn-icon">
-                <RiTeamLine size={"60px"} />
+                <RiTeamLine className="icons" size={"60px"} />
               </div>
-              Collaboration and Communication
+              <p className="titlePhon">Collaboration and Communication</p> 
             </div>
           </div>
         </div>
@@ -250,10 +256,10 @@ export default function App() {
        </div>
        <p className=" mb-1 text-[40px] mt-10  text-center "style={{ color: "white", fontFamily: "Bebas Neue" }}>SKILLES</p>
    
-       <div className="bg-yellow-500 rounded">
+
         
        <Skilles> </Skilles>
-       </div>
+       
        <p className=" mb-1 text-[40px] mt-10  text-center "style={{ color: "white", fontFamily: "Bebas Neue" }}>Project</p>
     </div>
   );
